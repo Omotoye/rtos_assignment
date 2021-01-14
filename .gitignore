@@ -1,0 +1,19 @@
+# for vscode stuff
+*.vscode
+*.json
+
+# Kernel Module Compile Results
+*.ko
+*.mod
+*.mod.c
+*.o
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# Executables
+*.out
