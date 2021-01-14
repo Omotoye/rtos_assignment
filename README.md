@@ -27,7 +27,7 @@ gcc multithreaded_app.c -pthread
 ```
 *__You can only compile the app in the working directory of the multithreaded_app.c file__*
 
-After the compilation you should get an __a.out__ file. Run the app with the command below 
+After the compilation you should get an __a.out__ file. Run the app with superuser privilages *(enter __*sudo su*__, then your password)* , enter the command below to run the app 
 ```bash
 ./a.out
 ```
@@ -39,3 +39,5 @@ After use enter the command below to remove the driver module
 ```bash
 rmmod ./character_device_driver.ko
 ```
+
+[GitHub Link to the code repository](https://github.com/Omotoye/rtos_assignment.git)
