@@ -77,37 +77,3 @@ int main(int argc, char *argv[])
     pthread_mutex_destroy(&task_mutex);
     return 0;
 }
-
-/*
-
-Task
-
-(1) Design an application with 3 threads, whose periods are 300ms, 500ms, and 800ms.
-
-(2) The threads shall just "waste time", as we did in the exercise with threads.
-
-(3) Design a simple driver with only open, close, write system calls.
-
-(4) During its execution, every tasks 
-
-	(i) opens the special file associated with the driver;
-
-	(ii ) writes to the driver its own identifier plus open square brackets (i.e., [1, [2, or [3)
-
-	(iii) close the special files
-
-	(iv) performs operations (i.e., wasting time)
-
-	(v) performs (i)(ii) and (iii) again in order to write to the driver its own identifier, b
-    ut with closed square brackets (i.e., 1], 2], or 3]).
-
-(5) The write system call simply writes on the kernel log the string that was received from the thread. 
-A typical output of the system, by reading the kernel log, may be the following [11][2[11]2][3[11]3]  . 
-This clearly shows that some threads can be preempted by other threads (if this does not happen, try to 
-increase the computational time of longer tasks).
-
-(6) Finally, modify the code of all tasks in order to use semaphores. Every thread now protects all 
-its operations (i) to (v) with a semaphore, which basically prevents other tasks from preempting it. 
-Specifically, use semaphores with priority ceiling.  
-
-*/
